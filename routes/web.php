@@ -11,6 +11,7 @@
 |
 */
 
+use App\PostCardSendingService;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,3 +20,9 @@ Route::get('/', function () {
 
 Route::get('/pay','PayOrderController@store');
 Route::get('/channels','ChannelController@index');
+Route::get('/posts','PostController@index');
+Route::get('/customers','CustomerController@index');
+
+// Route::get('/postcards', function(){
+//     $postcardService = new PostCardSendingService($country, $width, $height);
+// });
